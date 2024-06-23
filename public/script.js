@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         fetch('/login', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username, password })
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: new URLSearchParams({ username, password })
         })
         .then(response => {
             if (response.ok) {
