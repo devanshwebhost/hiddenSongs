@@ -30,20 +30,19 @@ const authenticate = (req, res, next) => {
 };
 
 // Login endpoint
-app.get('/login', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'login.html'));
-});
-
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
+    console.log('Received username:', username);
+    console.log('Received password:', password);
+
+    // Check if username and password match
     if (username === 'adminsongs' && password === '8920419664') {
-        req.session.loggedIn = true;
-        res.redirect('/');
+        req.session.loggedIn = true; // Set loggedIn to true in session
+        res.redirect('/'); // Redirect to home page or dashboard
     } else {
-        res.send('Invalid username or password');
+        res.status(401).send('Invalid username or password'); // Unauthorized status
     }
 });
-
 // Endpoint to fetch songs with cover image and info
 app.get('/api/songs', authenticate, (req, res) => {
     const artists = ['Arjit Singh', 'indresh ji', 'krishna', 'Radha ji', 'shree ram', 'Top hits'];
