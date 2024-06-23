@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#login input {
+    margin: 5px;
+    padding: 10px;
+    width: 200px;
+}
+
+#login button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.artist {
+    margin-bottom: 20px;
+}
+
+.cover {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.song {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.song h3 {
+    margin-bottom: 5px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 5px;
+}
